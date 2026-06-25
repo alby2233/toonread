@@ -5,7 +5,6 @@ import ComicCard from '../components/ComicCard';
 import { api } from '../api';
 import type { Comic } from '../types';
 import { Flame } from 'lucide-react';
-import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
