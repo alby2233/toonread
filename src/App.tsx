@@ -8,8 +8,6 @@ import AdminDashboard from './pages/AdminDashboard';
 import Store from './pages/Store';
 import { AuthProvider } from './AuthContext';
 
-import ParticleBackground from './components/ParticleBackground';
-
 import Browse from './pages/Browse';
 import Profile from './pages/Profile';
 
@@ -22,7 +20,6 @@ import Contact from './pages/legal/Contact';
 function App() {
   return (
     <AuthProvider>
-      <ParticleBackground />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

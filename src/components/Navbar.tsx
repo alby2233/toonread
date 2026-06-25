@@ -18,8 +18,8 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className="glass" 
-      style={{ position: 'sticky', top: 0, zIndex: 50, padding: '1rem 0' }}
+      className="manga-panel" 
+      style={{ position: 'sticky', top: 0, zIndex: 50, padding: '1rem 0', borderBottom: 'var(--panel-border)', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: '0' }}
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
