@@ -13,6 +13,12 @@ import ParticleBackground from './components/ParticleBackground';
 import Browse from './pages/Browse';
 import Profile from './pages/Profile';
 
+// Legal Pages
+import Terms from './pages/legal/Terms';
+import Privacy from './pages/legal/Privacy';
+import Refund from './pages/legal/Refund';
+import Contact from './pages/legal/Contact';
+
 function App() {
   return (
     <AuthProvider>
@@ -28,6 +34,10 @@ function App() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/comic/:id" element={<ComicDetails />} />
           <Route path="/comic/:id/chapter/:chapterNumber" element={<Reader />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/refund" element={<Refund />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </AuthProvider>
