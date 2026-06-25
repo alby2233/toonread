@@ -1,0 +1,37 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ComicDetails from './pages/ComicDetails';
+import Reader from './pages/Reader';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import AdminDashboard from './pages/AdminDashboard';
+import Store from './pages/Store';
+import { AuthProvider } from './AuthContext';
+
+import ParticleBackground from './components/ParticleBackground';
+
+import Browse from './pages/Browse';
+import Profile from './pages/Profile';
+
+function App() {
+  return (
+    <AuthProvider>
+      <ParticleBackground />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/browse" element={<Browse />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/comic/:id" element={<ComicDetails />} />
+          <Route path="/comic/:id/chapter/:chapterNumber" element={<Reader />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  );
+}
+
+export default App;
