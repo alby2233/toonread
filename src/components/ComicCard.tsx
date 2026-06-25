@@ -20,7 +20,7 @@ const ComicCard: React.FC<ComicCardProps> = ({ comic }) => {
     >
       <Link to={`/comic/${comic.id}`} style={{ display: 'block' }}>
         <div className="card" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-          <div style={{ position: 'relative', paddingTop: '140%', overflow: 'hidden' }}>
+          <div style={{ position: 'relative', paddingTop: '140%', overflow: 'hidden', background: '#000' }}>
             <img 
               src={comic.coverUrl && comic.coverUrl.startsWith('/uploads') ? `http://localhost:3000${comic.coverUrl}` : comic.coverUrl} 
               alt={comic.title}
@@ -30,7 +30,7 @@ const ComicCard: React.FC<ComicCardProps> = ({ comic }) => {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover'
+                objectFit: 'contain'
               }}
             />
             <div style={{

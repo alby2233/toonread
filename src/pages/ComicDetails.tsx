@@ -122,11 +122,13 @@ const ComicDetails: React.FC = () => {
             borderRadius: 'var(--radius-lg)',
             border: '1px solid rgba(255,255,255,0.05)'
           }}>
-            <img 
-              src={comic.coverUrl} 
-              alt={comic.title} 
-              style={{ width: '100%', aspectRatio: '2/3', objectFit: 'cover', borderRadius: 'var(--radius-md)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} 
-            />
+            <div style={{ background: '#000', borderRadius: 'var(--radius-md)', width: '100%', aspectRatio: '2/3', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img 
+                src={comic.coverUrl} 
+                alt={comic.title} 
+                style={{ width: '100%', height: '100%', objectFit: 'contain', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} 
+              />
+            </div>
             
             <div>
               <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem 0', lineHeight: 1.2 }}>{comic.title}</h1>
