@@ -26,11 +26,6 @@ const Home: React.FC = () => {
     fetchComics();
   }, []);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
   return (
     <div>
       <Navbar />
