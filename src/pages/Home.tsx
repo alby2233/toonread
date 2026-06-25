@@ -54,34 +54,26 @@ const Home: React.FC = () => {
         alignItems: 'center',
         background: 'radial-gradient(circle at top, rgba(139, 92, 246, 0.15), transparent 50%)'
       }}>
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem', maxWidth: '800px', lineHeight: 1.2 }}
+        <h1 
+          style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem', maxWidth: '800px', lineHeight: 1.2, color: 'white' }}
         >
           Discover the Ultimate <span className="text-gradient">Comic Experience</span>
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+        </h1>
+        <p 
           style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '3rem', maxWidth: '600px', lineHeight: 1.6 }}
         >
           Read thousands of premium comics, support your favorite creators, and unlock exclusive chapters instantly.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+        </p>
+        <div
           style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}
         >
           <button className="btn btn-primary" onClick={() => window.location.href='/browse'} style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
             Start Reading
           </button>
-          <button className="btn btn-outline" onClick={() => window.location.href='/store'} style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+          <button className="btn btn-glass" onClick={() => window.location.href='/store'} style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
             Get Coins
           </button>
-        </motion.div>
+        </div>
       </section>
 
       <main className="container" style={{ padding: '0 1.5rem 2rem 1.5rem' }}>
